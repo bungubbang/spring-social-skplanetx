@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Home</title>
+	</head>
+	<body>
+        <ul>
+            <li><a th:href="@{/signout}">Sign Out</a></li>
+        </ul>
+        <h3>Melon API</h3>
+        <ul>
+            <li>차트
+                <ul>
+                    <li><a href="/melon/chart/realtime">실시간차트</a></li>
+                    <li><a href="/melon/chart/todaytopsongs">일간차트</a></li>
+                    <li><a href="/melon/chart/topalbums">앨범차트</a></li>
+                    <li><a href="/melon/chart/topgenres">장르차트(가요)</a></li>
+                    <li>장르차트(장르별)
+                        <ul>
+                            <li><a href="/melon/chart/topgenres/DP0000">종합</a></li>
+                            <li><a href="/melon/chart/topgenres/DP0200">팝</a></li>
+                            <li><a href="/melon/chart/topgenres/DP0300">OST</a></li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li><a href="/melon/chart/genres">장르조회</a></li>
+                </ul>
+            </li>
+            <li>최신음악
+                <ul>
+                    <li><a href="/melon/newreleases/albums">최신앨범</a></li>
+                    <li>최신앨범(장르별)
+                        <ul>
+                            <li><a href="/melon/newreleases/albums/DP0000">종합</a></li>
+                            <li><a href="/melon/newreleases/albums/DP0200">팝</a></li>
+                            <li><a href="/melon/newreleases/albums/DP0300">OST</a></li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li><a href="/melon/newreleases/songs">최신곡</a></li>
+                    <li>장르차트(장르별)
+                        <ul>
+                            <li><a href="/melon/newreleases/songs/DP0000">종합</a></li>
+                            <li><a href="/melon/newreleases/songs/DP0200">팝</a></li>
+                            <li><a href="/melon/newreleases/songs/DP0300">OST</a></li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <script type="text/javascript" th:inline="javascript">
+            /*<![CDATA[*/
+            var profile = /*[[${profile}]]*/ null;
+            console.log(profile);
+            /*]]>*/
+        </script>
+	</body>
+</html>

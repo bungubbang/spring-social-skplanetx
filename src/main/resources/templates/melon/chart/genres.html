@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Melon 장르조회</title>
+</head>
+<body>
+<p><a th:href="@{/}">Home</a></p>
+<h1>Melon 장르조회</h1>
+<ul>
+    <li th:each="genre : ${genres.genres.genre}" th:text="${genre.genreName} + ' : ' + ${genre.genreId}"></li>
+</ul>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    var songs = /*[[${genres}]]*/ null;
+
+    // Debug
+    console.log(songs);
+    /*]]>*/
+</script>
+</body>
+</html>

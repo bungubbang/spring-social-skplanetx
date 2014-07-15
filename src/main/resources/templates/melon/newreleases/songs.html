@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Melon 최신곡</title>
+</head>
+<body>
+<p><a th:href="@{/}">Home</a></p>
+<h1>Melon 최신곡</h1>
+<ul>
+    <li th:each="song : ${songs.songs.song}" th:text="${song.songName}"></li>
+</ul>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    var song = /*[[${songs}]]*/ null;
+
+    // Debug
+    console.log(song);
+    /*]]>*/
+</script>
+</body>
+</html>

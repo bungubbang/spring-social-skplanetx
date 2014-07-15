@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Sign In</title>
+	</head>
+	<body>
+    <h1>LOGIN</h1>
+		<form th:action="@{/signin/skplanetx}" method="POST">
+			<button type="submit">Sign in with Skplanetx</button>
+			<input type="hidden" name="scope" value="user" />
+		</form>
+	</body>
+</html>
