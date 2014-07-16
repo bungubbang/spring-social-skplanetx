@@ -1,7 +1,6 @@
 package org.springframework.social.skplanetx.api.impl;
 
 import org.springframework.social.MissingAuthorizationException;
-import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
 
 /**
  * Created by bungubbang
