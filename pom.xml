@@ -6,7 +6,7 @@
 
     <groupId>org.springframework.social.skplanetx</groupId>
     <artifactId>spring-social-skplanetx</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>1.0.0.RELEASE</version>
 
     <properties>
         <maven.compiler.target>1.7</maven.compiler.target>
