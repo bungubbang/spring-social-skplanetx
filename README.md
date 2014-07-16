@@ -92,7 +92,7 @@ Refer to [Spring Social’s reference documentation](http://docs.spring.io/sprin
 
 ## Skplanet API Binding
 ---
-> This version(0.0.2-SNAPSHOT) only provides UserProfile and Melon API
+> This version(1.0.0-RELEASE) only provides UserProfile and Melon API
 
 Spring Social Skplanetx offers integration with Skplanetx's REST API with the `Skplanetx` interface and its implementation, `SkplanetxTemplate`.
 
