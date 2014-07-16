@@ -2,8 +2,6 @@ package org.springframework.social.skplanetx.api.melon.dto;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
 
-import java.util.List;
-
 /**
  * Created by bungubbang
  * Email: sungyong.jung@sk.com

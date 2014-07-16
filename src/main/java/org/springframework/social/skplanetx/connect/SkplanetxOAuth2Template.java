@@ -2,14 +2,11 @@ package org.springframework.social.skplanetx.connect;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.ConnectionFactory;
-import org.springframework.social.connect.ConnectionFactoryLocator;
 import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.social.skplanetx.connect.response.TokenResponse;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  * Created by bungubbang
@@ -20,9 +17,6 @@ public class SkplanetxOAuth2Template extends OAuth2Template {
 
     private static final String	AUTHORIZE_URL		= "https://oneid.skplanetx.com/oauth/authorize";
     private static final String	ACCESS_TOKEN_URL	= "https://oneid.skplanetx.com/oauth/token";
-
-    @Autowired
-    private ConnectionFactory connectionFactory;
 
     public SkplanetxOAuth2Template(String appId, String appSecret) {
         super(appId, appSecret, AUTHORIZE_URL, ACCESS_TOKEN_URL);
@@ -36,7 +30,6 @@ public class SkplanetxOAuth2Template extends OAuth2Template {
 
     @Override
     protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
-        parameters.add("scope", "user");
         String tokenUrl = accessTokenUrl
                                     + "?client_id={client_id}"
                                     + "&client_secret={client_secret}"

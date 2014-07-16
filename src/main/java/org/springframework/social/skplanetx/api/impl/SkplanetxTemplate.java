@@ -63,7 +63,7 @@ public class SkplanetxTemplate extends AbstractOAuth2ApiBinding implements Skpla
 
     @Override
     protected List<HttpMessageConverter<?>> getMessageConverters() {
-        List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
+        List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
         messageConverters.add(new StringHttpMessageConverter());
         messageConverters.add(getFormMessageConverter());
         messageConverters.add(getJson2MessageConverter());
@@ -85,7 +85,7 @@ public class SkplanetxTemplate extends AbstractOAuth2ApiBinding implements Skpla
 
     @Override
     protected void configureRestTemplate(RestTemplate restTemplate) {
-        ArrayList<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
+        ArrayList<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
         interceptors.addAll(restTemplate.getInterceptors());
         interceptors.add(new ClientHttpRequestInterceptor() {
             @Override

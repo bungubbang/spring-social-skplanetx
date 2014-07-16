@@ -1,9 +1,5 @@
 package org.springframework.social.skplanetx.api.melon;
 
-import org.springframework.social.skplanetx.api.impl.AbstractSkplanetxOperations;
-import org.springframework.social.skplanetx.api.melon.MelonOperations;
-import org.springframework.social.skplanetx.api.melon.dto.Melon;
-import org.springframework.social.skplanetx.api.user.dto.SkplanetxUserProfile;
 import org.springframework.web.client.RestTemplate;
 
 /**
