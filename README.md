@@ -69,25 +69,6 @@ If we wanted to add support for connecting to other providers, we would simply r
 
 Because client IDs and secrets may be different across environments (e.g., test, production, etc) it is recommended that these values be externalized. As shown here, Spring’s `Environment` abstraction is provided as a parameter to `addConnectionFactories()` so that it can look up the application’s client ID and secret.
 
-> **Important!!** because of scope problem in skplanetx. you must add 'SkplanetxSignInController'.
-
-And To add provider sign in capability to your Spring application, configure `SkplanetxSignInController` as a bean in your Spring MVC application:
-
-	@Bean
-	public ProviderSignInController providerSignInController(
-    	        ConnectionFactoryLocator connectionFactoryLocator,
-        	    UsersConnectionRepository usersConnectionRepository) {
-	    return new SkplanetxSignInController(
-    	    connectionFactoryLocator,
-	        usersConnectionRepository,
-    	    new SimpleSignInAdapter(new HttpSessionRequestCache()));
-	}
-Or in XML, if you prefer:
-
-	<bean class="org.springframework.social.connect.web.ProviderSignInController">
-    	<!-- relies on by-type autowiring for the constructor-args -->
-	</bean>
-
 Refer to [Spring Social’s reference documentation](http://docs.spring.io/spring-social/docs/1.1.0.RELEASE/reference/htmlsingle/#connecting) for complete details on configuring `ConnectController` and its dependencies.
 
 ## Skplanet API Binding
