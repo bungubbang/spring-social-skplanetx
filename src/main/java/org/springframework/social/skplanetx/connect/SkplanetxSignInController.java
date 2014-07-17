@@ -38,7 +38,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/signin", method = RequestMethod.GET)
-public class SkplanetxSignInController extends ProviderSignInController implements InitializingBean{
+public class SkplanetxSignInController implements InitializingBean{
 
     private final static Log logger = LogFactory.getLog(ProviderSignInController.class);
 
@@ -72,7 +72,7 @@ public class SkplanetxSignInController extends ProviderSignInController implemen
      */
     @Inject
     public SkplanetxSignInController(ConnectionFactoryLocator connectionFactoryLocator, UsersConnectionRepository usersConnectionRepository, SignInAdapter signInAdapter) {
-        super(connectionFactoryLocator, usersConnectionRepository, signInAdapter);
+//        super(connectionFactoryLocator, usersConnectionRepository, signInAdapter);
         this.connectionFactoryLocator = connectionFactoryLocator;
         this.usersConnectionRepository = usersConnectionRepository;
         this.signInAdapter = signInAdapter;
